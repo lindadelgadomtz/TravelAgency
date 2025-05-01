@@ -4,6 +4,8 @@ import Footer from './components/footer/Footer';
 import HeroSection from './components/heroSection/HeroSection';
 import DivOne from './components/divOne/DivOne';
 import BlogDivComp from './components/blogDivComp/BlogDivComp';
+import DestinationCarousel from './components/destinationCarousel/DestinationCarousel';
+import DestinationCarouselSwiper from './components/destinationCarouselSwiper/DestinationCarouselSwiper';
 
 function App() {
   return (
@@ -18,6 +20,36 @@ function App() {
         buttonLabel="Learn More"
         buttonUrl="/about"
       />
+      <DestinationCarouselSwiper
+  title="Our Favorite Escapes"
+  subtitle="DESTINATIONS"
+  destinations={[
+    {
+      name: 'Morocco',
+      description: 'Desert magic and ancient souks.',
+      imageUrl: '/images/morocco-destination.webp',
+      link: '/destinations/morocco'
+    },
+    {
+      name: 'Rastoke',
+      description: 'Dream waterfall city.',
+      imageUrl: '/images/rastoke-croatia.webp',
+      link: '/destinations/rastoke'
+    },
+    {
+      name: 'Venice',
+      description: 'Timeless charm over water.',
+      imageUrl: '/images/venice-travel-scene.webp',
+      link: '/destinations/venice'
+    },
+    {
+      name: 'Giant’s Causeway',
+      description: 'Natural wonder of basalt columns.',
+      imageUrl: '/images/giants-causeway-northern-ireland.webp',
+      link: '/destinations/giantscauseway'
+    }
+  ]}
+/>
       <BlogDivComp
         title="Stories from the Journey"
         subtitle="JOURNAL"
@@ -26,6 +58,38 @@ function App() {
         largeImage="/images/morocco-destination.webp"
         smallImage="/images/venice-travel-scene.webp"
       />
+       <DestinationCarousel
+        title="Our Favorite Escapes"
+        subtitle="DESTINATIONS"
+        destinations={[
+          {
+            name: 'Morocco',
+            description: 'Desert magic and ancient souks.',
+            imageUrl: '/images/morocco-destination.webp',
+            link: '/destinations/morocco'
+          },
+          {
+            name: 'Rastoke',
+            description: 'Dream waterfall city.',
+            imageUrl: '/images/rastoke-croatia.webp',
+            link: '/destinations/rastoke'
+          },
+
+          {
+            name: 'Venice',
+            description: 'Timeless charm over water.',
+            imageUrl: '/images/venice-travel-scene.webp',
+            link: '/destinations/venice'
+          },
+          {
+            name: 'Giants Caseway',
+            description: 'Magic and .',
+            imageUrl: '/images/giants-causeway-northern-ireland.webp',
+            link: '/destinations/giantscauseway'
+          },
+        ]}
+      />
+
       <Footer />
     </div>
   );
