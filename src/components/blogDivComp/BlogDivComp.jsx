@@ -10,8 +10,8 @@ const BlogDivComp = ({
   largeImage,
   smallImage
 }) => {
-  const [textRef, textInView] = useInView({ threshold: 0.2 });
-  const [imageRef, imageInView] = useInView({ threshold: 0.2 });
+  const [textRef, textInView] = useInView({ threshold: 0.05 });
+  const [imageRef, imageInView] = useInView({ threshold: 0.05 });
 
   return (
     <section className="blog-div">
@@ -30,7 +30,6 @@ const BlogDivComp = ({
         className={`blog-image-container ${imageInView ? 'fade-in-left' : ''}`}
         ref={imageRef}
       >
-      <div className="blog-image-container">
         <div className="image-wrapper">
           <img
             src={largeImage}
@@ -45,7 +44,6 @@ const BlogDivComp = ({
             loading="lazy"
           />
         </div>
-      </div>
       </div>
     </section>
   );
