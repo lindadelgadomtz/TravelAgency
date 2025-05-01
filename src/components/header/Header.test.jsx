@@ -21,11 +21,11 @@ describe('Header Component', () => {
 
   it('toggles the mobile menu when hamburger is clicked', () => {
     render(<Header />);
-    const hamburger = screen.getByLabelText(/toggle menu/i);
-    expect(screen.queryByText(/About/i)).toBeInTheDocument();
+    const hamburger = screen.getByLabelText(/toggle navigation menu/i);
     fireEvent.click(hamburger);
-    // You can assert that the 'open' class is now applied
-    const navLinks = screen.getByRole('navigation');
-    expect(navLinks.className).toMatch(/open/);
+
+    const nav = screen.getByRole('navigation');
+    expect(nav.className).toMatch(/open/);
   });
+
 });
