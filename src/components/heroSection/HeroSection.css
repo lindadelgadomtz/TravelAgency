@@ -1,0 +1,71 @@
+/* HeroSection.css */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(249, 248, 246, 0.5); /* Soft beige overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+  }
+  
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+  
+  .hero-button {
+    text-decoration: none;
+    border: 1px solid #caa47e;
+    color: #caa47e;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(255, 255, 255, 0.6); /* Soft white transparent background */
+    backdrop-filter: blur(5px); /* Elegant glass effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Soft shadow */
+  }
+  
+  .hero-button:hover {
+    background-color: #caa47e;
+    color: #fff;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.2rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
+  
+
+
