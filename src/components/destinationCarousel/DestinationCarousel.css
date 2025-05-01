@@ -1,0 +1,106 @@
+/* ====== DestinationCarousel.css ====== */
+.destination-carousel-section {
+    background-color: #333; /* Dark background */
+    color: #f9f8f6; /* Light text */
+    padding: 5rem 2rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .destination-carousel-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .destination-carousel-header {
+    margin-bottom: 3rem;
+  }
+  
+  .carousel-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: #caa47e;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .carousel-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #fff;
+    line-height: 1.3;
+    margin: 0;
+  }
+  
+  .carousel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .carousel-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.4s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    min-height: 340px; /* Adjust based on img height + overlay */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .carousel-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .carousel-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    flex-shrink: 0;
+  }
+  
+  .carousel-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .carousel-card-overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #f9f8f6;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: left;
+    flex-grow: 1;
+  }
+  
+  .carousel-card-overlay h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 0.3rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .carousel-card-overlay p {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-card img {
+      height: 200px;
+    }
+  }
+  
