@@ -1,0 +1,122 @@
+.div-one {
+    background-color: #fdf9f3;
+    /* Soft warm beige */
+    padding: 6rem 2rem;
+}
+
+.div-one-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 3rem;
+}
+
+/* IMAGE STYLES */
+.div-one-image {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.div-one-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* CONTENT STYLES */
+.div-one-content {
+    flex: 1 1 45%;
+    text-align: left;
+}
+
+.div-one-subheading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #caa47e;
+    margin-bottom: 0.5rem;
+}
+
+.div-one-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.75rem;
+    line-height: 1.3;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.div-one-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.div-one-button {
+    text-decoration: none;
+    border: 1px solid #caa47e;
+    color: #caa47e;
+    padding: 0.9rem 2.2rem;
+    border-radius: 999px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.div-one-button:hover {
+    background-color: #caa47e;
+    color: #fff;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .div-one-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .div-one-content {
+        text-align: center;
+    }
+
+    .div-one-title {
+        font-size: 2.2rem;
+    }
+
+    .div-one-text {
+        font-size: 1.05rem;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .div-one {
+        padding: 4rem 1.5rem;
+    }
+
+    .div-one-title {
+        font-size: 1.9rem;
+    }
+
+    .div-one-text {
+        font-size: 1rem;
+    }
+
+    .div-one-button {
+        font-size: 0.95rem;
+        padding: 0.7rem 1.5rem;
+    }
+
+    .div-one-subheading {
+        font-size: 0.8rem;
+    }
+}
