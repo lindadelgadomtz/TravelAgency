@@ -100,9 +100,15 @@ function App() {
         overlayHeight="35%"
         height="50vh"
       />  
- <QuoteBlock
-  text="Travel isn’t always pretty. It isn’t always comfortable. But that’s okay. The journey changes you."
-  author="Anthony Bourdain"
+<QuoteBlock
+  text="Travel is the only thing you buy that makes you richer."
+  author="Anonymous"
+  fontSize="2rem"
+  animationDirection="left"
+  animationDelay="0.2s"
+  theme="light"
+  variant="classic"
+  backgroundImage={null} // You can later use e.g. "/images/quote-bg.png"
 />
       <Footer />
     </div>
