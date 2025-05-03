@@ -2,10 +2,10 @@
 // jest.mock('swiper/react', () => require.requireActual('../../../__mocks__/swiper/react'));
 // jest.mock('swiper/modules', () => require.requireActual('../../../__mocks__/swiper/modules'));
 
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import DestinationCarousel from './DestinationCarouselSwiper';
-import '@testing-library/jest-dom';
+//import React from 'react';
+//import { render, screen } from '@testing-library/react';
+//import DestinationCarousel from './DestinationCarouselSwiper';
+//import '@testing-library/jest-dom';
 // import 'intersection-observer'; // if needed for useInView
 
 const mockDestinations = [
