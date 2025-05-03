@@ -6,6 +6,7 @@ import DivOne from './components/divOne/DivOne';
 import BlogDivComp from './components/blogDivComp/BlogDivComp';
 import DestinationCarousel from './components/destinationCarousel/DestinationCarousel';
 import DestinationCarouselSwiper from './components/destinationCarouselSwiper/DestinationCarouselSwiper';
+import FullImageWithGradient from './components/fullImageWithGradient/FullImageWithGradient';
 
 function App() {
   return (
@@ -50,6 +51,14 @@ function App() {
     }
   ]}
 />
+<FullImageWithGradient
+        src="/images/great-wall.webp"
+        alt="The Great Wall"
+        fadeColor="255, 255, 255"
+        blurAmount="12px"
+        overlayHeight="35%"
+        height="50vh"
+      />  
       <BlogDivComp
         title="Stories from the Journey"
         subtitle="JOURNAL"
@@ -89,7 +98,7 @@ function App() {
           },
         ]}
       />
-
+ 
       <Footer />
     </div>
   );

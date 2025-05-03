@@ -1,37 +1,55 @@
-'use client';
-
 import React from 'react';
+import PropTypes from 'prop-types';
+import './FullImageWithGradient.css';
 
 const FullImageWithGradient = ({
   src,
-  alt = '',
-  className = '',
-  height = '60vh',
+  alt,
+  className,
+  height,
+  fadeColor,
+  blurAmount,
+  overlayHeight,
 }) => {
   return (
     <div
-      className={`relative w-full overflow-hidden ${className}`}
-      style={{ height }}
+      className={`full-image-wrapper ${className}`}
+      style={{
+        height,
+        '--fade-color': fadeColor,
+        '--blur-amount': blurAmount,
+        '--overlay-height': overlayHeight,
+      }}
     >
       <img
         src={src}
         alt={alt}
         loading="lazy"
         decoding="async"
-        className="w-full h-full object-cover"
-        sizes="100vw"
-        style={{ display: 'block' }}
+        className="full-image"
       />
-      <div
-        className="absolute bottom-0 left-0 w-full h-1/3 pointer-events-none"
-        style={{
-          background:
-            'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 60%, rgba(255,255,255,1) 100%)',
-          backdropFilter: 'blur(12px)',
-        }}
-      />
+      <div className="image-gradient-overlay" />
     </div>
   );
+};
+
+FullImageWithGradient.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string,
+  className: PropTypes.string,
+  height: PropTypes.string,
+  fadeColor: PropTypes.string,     // RGB format, e.g. "0, 0, 0"
+  blurAmount: PropTypes.string,    // e.g. "10px"
+  overlayHeight: PropTypes.string, // e.g. "30%"
+};
+
+FullImageWithGradient.defaultProps = {
+  alt: '',
+  className: '',
+  height: '60vh',
+  fadeColor: '255, 255, 255',
+  blurAmount: '10px',
+  overlayHeight: '30%',
 };
 
 export default FullImageWithGradient;
