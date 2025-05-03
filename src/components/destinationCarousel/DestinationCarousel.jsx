@@ -10,7 +10,7 @@ const DestinationCarousel = ({
   const [ref, inView] = useInView({ threshold: 0.25 });
 
   return (
-    <section className={`destination-carousel-section ${inView ? 'fade-in' : 'fade-start'}`} ref={ref} role="region"
+    <section className={`destination-carousel-section ${inView ? 'fade-in' : 'fade-start'}`} ref={ref} 
     aria-labelledby="dest-carousel-title">
       <div className="destination-carousel-header">
         <span className="carousel-subtitle">{subtitle}</span>
