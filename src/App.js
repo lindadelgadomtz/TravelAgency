@@ -7,6 +7,7 @@ import BlogDivComp from './components/blogDivComp/BlogDivComp';
 import DestinationCarousel from './components/destinationCarousel/DestinationCarousel';
 import DestinationCarouselSwiper from './components/destinationCarouselSwiper/DestinationCarouselSwiper';
 import FullImageWithGradient from './components/fullImageWithGradient/FullImageWithGradient';
+import QuoteBlock from './components/quoteBlock/QuoteBlock';
 
 function App() {
   return (
@@ -51,14 +52,7 @@ function App() {
     }
   ]}
 />
-<FullImageWithGradient
-        src="/images/great-wall.webp"
-        alt="The Great Wall"
-        fadeColor="255, 255, 255"
-        blurAmount="12px"
-        overlayHeight="35%"
-        height="50vh"
-      />  
+
       <BlogDivComp
         title="Stories from the Journey"
         subtitle="JOURNAL"
@@ -98,7 +92,18 @@ function App() {
           },
         ]}
       />
- 
+      <FullImageWithGradient
+        src="/images/great-wall.webp"
+        alt="The Great Wall"
+        fadeColor="255, 255, 255"
+        blurAmount="12px"
+        overlayHeight="35%"
+        height="50vh"
+      />  
+ <QuoteBlock
+  text="Travel isn’t always pretty. It isn’t always comfortable. But that’s okay. The journey changes you."
+  author="Anthony Bourdain"
+/>
       <Footer />
     </div>
   );
