@@ -1,0 +1,46 @@
+.quote-block {
+    margin: 4rem auto;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #1a1a1a;
+    position: relative;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  
+  .quote-block .quote-mark {
+    font-size: 4rem;
+    line-height: 1;
+    color: #ccc;
+    margin-bottom: 1rem;
+  }
+  
+  .quote-block .quote-text {
+    margin: 0 auto;
+    white-space: pre-line;
+  }
+  
+  .quote-block .quote-author {
+    margin-top: 1.5rem;
+    display: block;
+    font-size: 1rem;
+    color: #666;
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  @media (max-width: 600px) {
+    .quote-block {
+      font-size: 1.2rem;
+      padding: 1.5rem 1rem;
+    }
+  
+    .quote-block .quote-mark {
+      font-size: 3rem;
+    }
+  
+    .quote-block .quote-author {
+      font-size: 0.9rem;
+    }
+  }
+  
