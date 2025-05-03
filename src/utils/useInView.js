@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const useInView = (options = { threshold: 0.75}) => {
+const useInView = (options = { threshold: 0.75 }) => {
   const ref = useRef(null);
   const [isInView, setIsInView] = useState(false);
 
@@ -15,12 +15,14 @@ const useInView = (options = { threshold: 0.75}) => {
       { threshold: 0.1, ...options }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentElement = ref.current;
+
+    if (currentElement) {
+      observer.observe(currentElement);
     }
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (currentElement) observer.unobserve(currentElement);
     };
   }, [options]);
 
