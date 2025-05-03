@@ -1,11 +1,11 @@
 // DestinationCarouselSwiper.jsx (Swiper version)
 import React from 'react';
-//import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Navigation, Pagination } from 'swiper/modules';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-// import './DestinationCarouselSwiper.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import './DestinationCarouselSwiper.css';
 import useInView from '../../utils/useInView';
 
 const DestinationCarouselSwiper = ({
@@ -19,11 +19,10 @@ const DestinationCarouselSwiper = ({
     <section
       className={`destination-carousel-section ${inView ? 'fade-in' : 'fade-start'}`}
       ref={ref}
-      aria-labelledby="dest-carousel-title"
     >
       <div className="destination-carousel-header">
         <span className="carousel-subtitle">{subtitle}</span>
-        <h2 id="dest-carousel-title" className="carousel-title">{title}</h2>
+        <h2 className="carousel-title">{title}</h2>
       </div>
 
       <Swiper
