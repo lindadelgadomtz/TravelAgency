@@ -8,6 +8,7 @@ import DestinationCarousel from './components/destinationCarousel/DestinationCar
 import DestinationCarouselSwiper from './components/destinationCarouselSwiper/DestinationCarouselSwiper';
 import FullImageWithGradient from './components/fullImageWithGradient/FullImageWithGradient';
 import QuoteBlock from './components/quoteBlock/QuoteBlock';
+import FeatureBlock from './components/featureBlock/FeatureBlock';
 
 function App() {
   return (
@@ -110,6 +111,35 @@ function App() {
   variant="classic"
   backgroundImage={null} // You can later use e.g. "/images/quote-bg.png"
 />
+<FeatureBlock
+  title="Uncover the Hidden Wonders"
+  text="Step off the beaten path and into authentic, handpicked experiences."
+  imageUrl="/images/swiss_alps_snowfall.webp"
+  imageAlt="Luxury in the Alps"
+  imageCaption="Photo by L&V Travels"
+  bgColor="#eaeaea"
+  backgroundWidth="55%"
+  backgroundHeight="90%"
+  roundedBackground={false}
+  imageWidth="350px"
+  imageHeight="450px"
+  titleFont="'Playfair Display', serif"
+  textFont="'Lato', sans-serif"
+  captionFont="'Lora', serif"
+  captionBackground={true}
+  showButton={true}
+  buttonLabel="Start Planning"
+  buttonUrl="/contact"
+  roundedImage={false}
+  animation="fade-in"
+  animationDelay="0.2s"
+  imagePosition="right"
+  darkMode={false}
+/>
+
+
+
+
       <Footer />
     </div>
   );
