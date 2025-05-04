@@ -8,6 +8,32 @@ import DestinationCarousel from './components/destinationCarousel/DestinationCar
 import DestinationCarouselSwiper from './components/destinationCarouselSwiper/DestinationCarouselSwiper';
 import FullImageWithGradient from './components/fullImageWithGradient/FullImageWithGradient';
 import QuoteBlock from './components/quoteBlock/QuoteBlock';
+import ExhibitionGallery from './components/exhibitionGallery/ExhibitionGallery';
+
+const galleryItems = [
+  {
+    title: 'Giants Causeway',
+    description: 'A unique geological wonder in Northern Ireland.',
+    author: 'Travel & Tales',
+    imageUrl: '/images/giants-causeway-northern-ireland.webp',
+    alt: 'Giants Causeway Northern Ireland',
+  },
+  {
+    title: 'Rastoke, Croatia',
+    description: 'Charming village where waterfalls and homes blend.',
+    author: 'Wander & Snap',
+    imageUrl: '/images/rastoke-croatia.webp',
+    alt: 'Rastoke Croatia',
+  },
+  {
+    title: 'Venice, Italy',
+    description: 'Timeless city of canals, bridges and beauty.',
+    author: 'L&V Travels',
+    imageUrl: '/images/venice-travel-scene.webp',
+    alt: 'Venice Travel Scene',
+  },
+];
+
 
 function App() {
   return (
@@ -110,6 +136,21 @@ function App() {
   variant="classic"
   backgroundImage={null} // You can later use e.g. "/images/quote-bg.png"
 />
+
+<ExhibitionGallery
+  items={galleryItems}
+  bgColor="#fefefe"
+  fontFamily="'Lato', sans-serif"
+  titleFont="'Playfair Display', serif"
+  roundedImages={true}
+  showButton={false}
+  buttonLabel="Discover More"
+  buttonUrl="/destinations"
+  animation="fade-in"
+  animationDelay="0.2s"
+  darkMode={false}
+/>
+
       <Footer />
     </div>
   );
